@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#fb6264</color>
     <color name="fire">#f36933</color>
+    <color name="invisible">#00F36933</color>
+
 </resources>

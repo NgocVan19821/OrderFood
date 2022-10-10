@@ -1,8 +1,10 @@
 package com.example.orderfood.feature.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.orderfood.R
+import com.example.orderfood.feature.detail.DetailActivity
 import com.example.orderfood.feature.main.adapter.FoodAdapter
 import com.example.orderfood.feature.main.adapter.TypeAdapter
 import com.example.orderfood.model.Food
@@ -42,6 +44,11 @@ class MainActivity : AppCompatActivity() {
     private fun eventListener(){
         searchButton.setOnClickListener {
             listFood.add(Food("Spaghetti", 44, R.drawable.ic_chinese_food, 3.2))
+        }
+
+        menu.setOnClickListener {
+            val i = Intent(this@MainActivity, DetailActivity::class.java)
+            startActivity(i)
         }
     }
 }

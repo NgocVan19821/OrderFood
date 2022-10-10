@@ -153,24 +153,33 @@
             android:textSize="15sp" />
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_food"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:scrollbars="none"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:listitem="@layout/item_food" />
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/bg_circle"
-        android:text="Menu"
-        android:textColor="@color/white"/>
+        android:layout_height="match_parent">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_food"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/item_food" />
 
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
 
+            android:background="@drawable/bg_circle"
+            android:padding="10dp"
+            android:text="@string/menu"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </RelativeLayout>
 
 
 </LinearLayout>
