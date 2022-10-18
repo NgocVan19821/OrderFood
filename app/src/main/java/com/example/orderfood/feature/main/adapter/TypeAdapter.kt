@@ -9,8 +9,13 @@ import com.example.orderfood.model.Type
 import kotlinx.android.synthetic.main.item_type.view.*
 
 class TypeAdapter(
+    var listener: onItemListener,
     var typeList: ArrayList<Type>
 ):RecyclerView.Adapter<TypeAdapter.MyViewHolder>() {
+    interface onItemListener{
+        fun onClickItem(item: Type)
+        fun onClickDelete(item: Type)
+    }
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -24,6 +29,14 @@ class TypeAdapter(
         val item = typeList[position]
         holder.itemView.itemImg.setImageResource(item.img)
         holder.itemView.itemText.text = item.title
+
+        holder.itemView.item.setOnClickListener {
+            listener.onClickItem(item)
+        }
+
+        holder.itemView.itemImg.setOnClickListener {
+            listener.onClickDelete(item)
+        }
     }
 
     override fun getItemCount(): Int {

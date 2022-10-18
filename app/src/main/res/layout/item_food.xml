@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="30dp"
     app:cardElevation="10dp"
-    android:backgroundTint="@color/white"
     android:layout_margin="10dp">
     <LinearLayout
         android:layout_width="wrap_content"
@@ -49,7 +48,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/addcart"
+            android:id="@+id/addCart"
             android:background="@drawable/bg_corner_pink"
             android:backgroundTint="@color/pink"
             android:text="+"
